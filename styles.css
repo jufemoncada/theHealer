@@ -1,0 +1,134 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('icons/fonts/icomoon.eot?w86ajk');
+    src:  url('icons/fonts/icomoon.eot?w86ajk#iefix') format('embedded-opentype'),
+      url('icons/fonts/icomoon.ttf?w86ajk') format('truetype'),
+      url('icons/fonts/icomoon.woff?w86ajk') format('woff'),
+      url('icons/fonts/icomoon.svg?w86ajk#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+  
+  .icon-location:before {
+    content: "\e947";
+}
+  .icon-menu:before {
+    content: "\e9bd";
+}
+
+body {
+    /* width: 100%; */
+    font-family: Helvetica;
+    margin: 0;
+    background-color: #f5fcf8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+h1{
+    font-weight: 200;
+    text-align: left;
+    margin-left: 25px;
+}
+
+.header{
+    width: 100%;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: space-between;
+    /* padding:0 20px; */
+    /* grid-row: 1/2; */
+}
+.icon-location, .icon-menu{
+    padding: 30px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.header img{
+    
+    height: 125px;
+}
+.slide-container{
+    width: 1280px;
+    height: 550px;
+    overflow-x: scroll;
+    scrollbar-width: thin;
+    overflow-y: hidden;
+}
+::-webkit-scrollbar {
+    width: 0;
+  }
+.slide-post{
+    display: grid;
+    grid-template: 1fr / repeat(4,1280px);
+    /* grid-area: "plato drinks""plato salt""plato sugar""plato bowl"; */
+    position: relative;
+}
+
+
+.plato{
+    width: 350px;
+    height: 550px;
+    box-shadow: inset 20px 0 40px rgb(255, 255, 255);
+    color: rgb(24, 23, 23);
+    background-color: #facc4d;
+    /* border: red solid 2px; */
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 0;
+}
+.plato.drinks{
+    grid-column: 1 / span 1;
+}
+.plato.salt{
+    grid-column: 2 / span 1;
+
+}
+.plato.sugar{
+    grid-column: 3 / span 1;
+    
+}
+.plato.bowl{
+    grid-column: 4 /span 1;
+
+}
+.list-products{
+    margin: 0;
+    padding: 0;
+}
+.products{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.item{
+    font-family: Helvetica;
+    text-decoration: none;
+    color: black;
+}
+
+.menu-container{
+    margin: 10px 30px;
+}
